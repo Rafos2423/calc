@@ -81,7 +81,6 @@ class NameState extends State<GeoTask> {
           padding: const EdgeInsets.only(top: 120),
           child: Column(
             children: [
-              const Center(),
               StyleState().drawBorderField(
                   this, auto, controllers["x1"]!, "X1:",
                   width: 120.0),
@@ -110,7 +109,7 @@ class NameState extends State<GeoTask> {
                       const SizedBox(height: 25),
                       StyleState().drawNoBorderField(
                           this, directTask, controllers["dist"]!, "Расстояние:",
-                          width: 120),
+                          width: 120)
                     ],
                   ),
                   const SizedBox(width: 20),
@@ -124,9 +123,26 @@ class NameState extends State<GeoTask> {
                       const SizedBox(height: 25),
                       StyleState().drawNoBorderField(
                           this, reverseTask, controllers["y2"]!, "Y2:",
-                          width: 120),
+                          width: 120)
                     ],
                   ),
+                ],
+              ),
+              const SizedBox(height: 15),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Column(
+                    children: [
+                      Text("Прямая ГЗ", style: TextStyle(fontSize: 18, color: color)),
+                    ]
+                  ),
+                  SizedBox(width: 90),
+                  Column(
+                    children: [
+                      Text("Обратная ГЗ", style: TextStyle(fontSize: 18, color: color))
+                    ]
+                  )
                 ],
               ),
             ],
